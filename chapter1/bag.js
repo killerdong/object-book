@@ -16,7 +16,7 @@ module.exports = class {
         this.ticket = null;
     }
 
-    hasInvitation() {
+    _hasInvitation() {
         return !!this.invitation;
     }
 
@@ -24,7 +24,7 @@ module.exports = class {
         return !!this.ticket;
     }
 
-    setTicket(ticket) {
+    _setTicket(ticket) {
         if (!(ticket instanceof Ticket)) {
             throw new Error('ticket 은 Ticket 클래스의 인스턴스이어야 합니다.');
         }
@@ -32,17 +32,32 @@ module.exports = class {
         this.ticket = ticket;
     }   
 
-    minusAmount(amount) {
+    _minusAmount(amount) {
         if (!Number.isInteger(amount)) {
             throw new Error('amount는 정수형 타입이어야 합니다.');
         }
         this.amount -= amount;
     }
 
-    plusAmount(amount) {
+    _plusAmount(amount) {
         if (!Number.isInteger(amount)) {
             throw new Error('amount는 정수형 타입이어야 합니다.');
         }
         this.amount += amount;
+    }
+
+    hold(ticket) {
+
+        this._setTicket(ticket);
+
+        if (!this._hasInvitation()) {
+            const usedFee = ticket.getFee();
+            
+            this._minusAmount(usedFee);
+
+            return usedFee;
+        }
+
+        return 0;
     }
 }

@@ -16,17 +16,6 @@ module.exports = class {
     buy(ticket) {
         Util.paramChecker(Ticket, ticket, 'ticket는 Ticket 클래스의 인스턴스이어야 합니다.');
 
-        if (this.bag.hasInvitation()) {
-            this.bag.setTicket(ticket);
-            return 0;
-        } else {
-            const usedFee = ticket.getFee();
-
-            this.bag.setTicket(ticket);
-            this.bag.minusAmount(usedFee);
-
-            return usedFee;
-        }
-
+        return this.bag.hold(ticket);
     }
 }

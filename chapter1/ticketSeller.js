@@ -15,6 +15,6 @@ module.exports = class {
             throw new Error('audience 는 Audience 클래스의 인스턴스이어야 합니다.');
         }
 
-        this.ticketOffice.plusAmount(audience.buy(this.ticketOffice.getTicket()));
+        this.ticketOffice.sellTicketTo(audience);
     }
 }
