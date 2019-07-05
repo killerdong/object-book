@@ -1,0 +1,25 @@
+{
+  "name": "object-book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killerdong/object-book.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/killerdong/object-book/issues"
+  },
+  "homepage": "https://github.com/killerdong/object-book#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
