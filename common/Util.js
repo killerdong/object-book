@@ -8,6 +8,12 @@ module.exports = class {
     }
 
     static isNotTypeArray(type, values) {
-        return this.isTypeArray(type, value);
+        return this.isTypeArray(type, values);
+    }
+
+    static paramChecker(type, instance, message) {
+        if (!(instance instanceof type)) {
+            throw new Error(message);
+        }
     }
 }

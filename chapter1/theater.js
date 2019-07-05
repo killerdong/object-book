@@ -16,15 +16,7 @@ module.exports = class {
             throw new Error('audience 는 Audience 클래스의 인스턴스이어야 합니다.');
         }
 
-        if (audience.getBag().hasInvitation()) {
-            const ticket = this.ticketSeller.getTicketOffice().getTicket();
-            audience.getBag().setTicket(ticket);                
-        } else {
-            const ticket = this.ticketSeller.getTicketOffice().getTicket();
-            audience.getBag().setTicket(ticket);
-    
-            this.ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
-            audience.getBag().minusAmount(ticket.getFee());
-        }
+        this.ticketSeller.sellTo(audience);
+
     }
 }

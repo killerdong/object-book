@@ -1,7 +1,6 @@
 const Invitation = require('./invitation');
 const Ticket = require('./ticket');
 
-
 module.exports = class {
     constructor(amount, invitation = null) {
         if (!Number.isInteger(amount)) {
