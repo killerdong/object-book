@@ -1,0 +1,1 @@
+{"version":3,"file":"TicketSeller.js","sourceRoot":"","sources":["../chapter1/TicketSeller.ts"],"names":[],"mappings":";;AAEA,MAAqB,YAAY;IAI7B,YAAY,YAA0B;QAClC,IAAI,CAAC,YAAY,GAAG,YAAY,CAAC;IACrC,CAAC;IAED,eAAe;QACX,OAAO,IAAI,CAAC,YAAY,CAAC;IAC7B,CAAC;CACJ;AAXD,+BAWC"}
