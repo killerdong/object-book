@@ -10,8 +10,6 @@ export default class TicketSeller {
     }
 
     sellTo(audience: Audience): void {
-        const {ticketOffice} = this;
-        
-        ticketOffice.plusAmount(audience.buy(ticketOffice.getTicket()));
+        this.ticketOffice.sellTicketTo(audience);
     }
 }

@@ -9,15 +9,7 @@ export default class Audience {
     }
 
     public buy(ticket: Ticket): number {
-        if (this.bag.hasInvitation()) {
-            this.bag.setTicket(ticket);
 
-            return 0;
-        } 
-
-        this.bag.minusAmount(ticket.getFee());
-        this.bag.setTicket(ticket);
-
-        return ticket.getFee();
+        return this.bag.hold(ticket);
     }
 }
