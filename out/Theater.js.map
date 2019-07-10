@@ -1,1 +1,0 @@
-{"version":3,"file":"Theater.js","sourceRoot":"","sources":["../chapter1/Theater.ts"],"names":[],"mappings":";;AAGA,MAAqB,OAAO;IAGxB,YAAY,YAA0B;QAClC,IAAI,CAAC,YAAY,GAAG,YAAY,CAAC;IACrC,CAAC;IAED,KAAK,CAAC,QAAkB;QACpB,IAAI,CAAC,YAAY,CAAC,MAAM,CAAC,QAAQ,CAAC,CAAC;IACvC,CAAC;CACJ;AAVD,0BAUC"}
