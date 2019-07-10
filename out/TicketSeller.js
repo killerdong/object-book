@@ -4,8 +4,9 @@ class TicketSeller {
     constructor(ticketOffice) {
         this.ticketOffice = ticketOffice;
     }
-    getTicketOffice() {
-        return this.ticketOffice;
+    sellTo(audience) {
+        const { ticketOffice } = this;
+        ticketOffice.plusAmount(audience.buy(ticketOffice.getTicket()));
     }
 }
 exports.default = TicketSeller;

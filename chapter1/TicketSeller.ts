@@ -1,4 +1,5 @@
 import TicketOffice from './TicketOffice';
+import Audience from './Audience';
 
 export default class TicketSeller {
 
@@ -8,7 +9,9 @@ export default class TicketSeller {
         this.ticketOffice = ticketOffice;
     }
 
-    getTicketOffice(): TicketOffice {
-        return this.ticketOffice;
+    sellTo(audience: Audience): void {
+        const {ticketOffice} = this;
+        
+        ticketOffice.plusAmount(audience.buy(ticketOffice.getTicket()));
     }
 }
